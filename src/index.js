@@ -12,7 +12,7 @@ export default function install (Vue, setupOptions = {}) {
   bootstrap(options)
     .then(() => {
       const { host, siteId, file } = options
-      const matomo = window.Piwik.getTracker(host + '/' + file, siteId)
+      const matomo = window.Piwik.getTracker(host + file + '.php', siteId)
 
       // Assign matomo to Vue
       Vue.prototype.$piwik = matomo

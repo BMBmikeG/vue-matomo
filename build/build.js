@@ -20,7 +20,7 @@ const {
   moduleName,
   version,
   processStyle
-} = require('./utils')
+} = require('./utils/index')
 
 function rollupBundle ({ env }) {
   return rollup({

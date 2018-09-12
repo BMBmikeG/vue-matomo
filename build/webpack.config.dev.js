@@ -12,7 +12,7 @@ const {
   logError,
   red,
   vueLoaders
-} = require('./utils')
+} = require('./utils/index')
 
 const rootDir = resolve(__dirname, '../test')
 const buildPath = resolve(rootDir, 'dist')

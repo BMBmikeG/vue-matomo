@@ -7,7 +7,7 @@ const {
   filename,
   version,
   vueLoaders
-} = require('./utils')
+} = require('./utils/index')
 
 const plugins = [
   new webpack.DefinePlugin({
