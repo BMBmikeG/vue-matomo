@@ -2,7 +2,8 @@ import bootstrap from './bootstrap'
 
 const defaultOptions = {
   requireConsent: false,
-  trackInitialView: true
+  trackInitialView: true,
+  file: 'piwik.php'
 }
 
 export default function install (Vue, setupOptions = {}) {
@@ -10,8 +11,8 @@ export default function install (Vue, setupOptions = {}) {
 
   bootstrap(options)
     .then(() => {
-      const { host, siteId } = options
-      const matomo = window.Piwik.getTracker(host + '/piwik.php', siteId)
+      const { host, siteId, file } = options
+      const matomo = window.Piwik.getTracker(host + '/' + file, siteId)
 
       // Assign matomo to Vue
       Vue.prototype.$piwik = matomo
